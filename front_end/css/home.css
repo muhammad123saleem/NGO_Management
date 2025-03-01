@@ -1,0 +1,397 @@
+
+
+.section-colour{
+    color: black;
+}
+.theme {
+    margin-left: 10px;
+}
+
+.theme-img {
+    height: 30px;
+    background-color: white;
+    padding: 0.5px;
+    border-radius: 50%;
+}
+
+.theme-light{
+    background-color: white;
+}
+
+.theme-dark{
+    background-color: black;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px 10px;
+}
+
+.card {
+    box-shadow: 0 0 10px 5px #a3a3a3;
+    border: none;
+    text-align: center;
+    width: 31%;
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    border: none;
+    font-weight: bolder;
+    display: block;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.work-img{
+    height: 80px;
+    width: 80px;
+}
+
+.intro-text{
+    font-size: 20px;
+    text-align: center;
+}
+
+.counter {
+    position: relative;
+    padding: 100px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/home/counter.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-img{
+    height: 300px;
+    display: block;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+.gallery-card
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 30px;
+}
+
+.gallery-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.selector{
+    border:solid 1x black;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.user-card{
+    background-color: #F2F4F4;
+    width: 530px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    height: 290px;
+    display: block;
+    margin: 10px auto;
+}
+.user-profile{
+    display: block;
+    border-radius: 50%;
+    margin: 5px auto;
+    height: 80px;
+    margin-left: 0;
+}
+.user-name{
+    color: black;
+    font-size: 20px;
+    margin: 18px auto;
+    padding: 10px;
+    margin-top: -85px;
+    margin-left: 90px;
+}
+.user-name-email{
+    color: black;
+    font-size: 15px;
+    margin: 18px auto;
+    padding: 10px;
+    margin-top: -34px;
+    margin-left: 90px;
+}
+.review-rating-img
+{
+    margin-top: -240px;
+    margin-left: 350px;
+}
+.review-text{
+    font-size: 18px;
+    margin-top: 50px;
+    
+}
+.rating-star{
+    margin-top: -240px;
+    margin-left: 350px;
+}
+.user-card:hover{
+    background-color: darkgrey;
+    box-shadow: 0 0 3px 1px grey;
+    transition: 0.3s;
+}
+.small-txt{
+    font-weight: bold;
+}
+
+.quantity{
+    height: 30px;
+}
+
+.quant{
+    font-size: 20px;
+}
+
+.number{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.test{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.schedule{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.scheme-text{
+    font-weight: bold;
+}
+@media screen and (max-width:1100px) and (min-width:700px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0 0 10px 5px #a3a3a3;
+        border: none;
+        text-align: center;
+    }
+
+    .card {
+        margin: 10px;
+        width: 60%;
+    }
+
+    .gallery-card{
+        flex-direction: column;
+    }
+    .test{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+}
+.testimonial-card {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card .quote-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .testimonial-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.testimonial-card .author-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.countdown-card {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width:80% ;
+    text-align: center;
+}
+
+.countdown-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.count {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.event{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.timer{
+    padding: 10px 20px;
+}
+
+
+@media screen and (max-width:700px) and (min-width:460px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0 0 10px 5px #a3a3a3;
+        border: none;
+        text-align: center;
+    }
+
+    .card {
+        margin: 10px;
+        width: 80%;
+    }
+
+    .gallery-card{
+        flex-direction: column;
+    }
+
+    .gallery-img{
+        height: 150px;
+    }
+
+    .test{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:460px) and (min-width:340px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .card {
+        margin: 10px;
+        width: 98%;
+    }
+
+    .card-text {
+        font-size: 10px;
+    }
+
+    .button {
+        font-size: 10px;
+    }
+    .gallery-card{
+        flex-direction: column;
+        width: 95%;
+    }
+    .gallery-img{
+        height: 150px;
+    }
+
+    .test{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width:340px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .card {
+        margin: 10px;
+        width: 98%;
+    }
+
+    .card-text {
+        font-size: 10px;
+    }
+
+    .button {
+        font-size: 10px;
+    }
+    .gallery-card{
+        flex-direction: column;
+        width: 99%;
+    }
+    .gallery-img{
+        height: 100px;
+    }
+    .counter-img{
+        height: 50px;
+    }
+    .intro-text{
+        font-size: 12px;
+    }
+    .work-img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .test{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
