@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}NGO Registration{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/registration.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="register-container">
+    <!-- ✅ LEFT SIDE: Registration Form -->
+    <div class="register-form">
+        <h2>Register</h2>
+        <form method="POST" id="contact-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn submit-btn">Send</button>
+        </form>
+        <p class="login-link">Already Have An Account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+
+    <!-- ✅ RIGHT SIDE: Blurred Image -->
+    <div class="register-image">
+        <img src="{% static 'images/register-blurred.jpg' %}" alt="Registration Image">
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/registration.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Register for {{ event.name }} - NGO{% endblock title %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/event_register.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="event-register-container">
+    <div class="event-info">
+        <h2>Register for {{ event.name }}</h2>
+        <p><strong>Date:</strong> {{ event.date|date:"F j, Y" }}</p>
+        <p><strong>Time:</strong> {{ event.time }}</p>
+        <p><strong>Location:</strong> {{ event.location }}</p>
+        <p class="event-description"><strong>Description:</strong> {{ event.description }}</p>
+    </div>
+
+    <div class="register-form">
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <p class="success-message">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Ensure the form is correctly structured -->
+        <form action="" method="post">
+            {% csrf_token %}  <!-- ✅ Required for Django forms -->
+
+            <div class="form-group">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+            </div>
+
+            <div class="form-group">
+                {{ form.phone_number.label_tag }}
+                {{ form.phone_number }}
+            </div>
+
+            <div class="form-group">
+                {{ form.address.label_tag }}
+                {{ form.address }}
+            </div>
+
+            <div class="form-group">
+                {{ form.member_count.label_tag }}
+                {{ form.member_count }}
+            </div>
+
+            <button type="submit" class="btn-submit">Register for Event</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

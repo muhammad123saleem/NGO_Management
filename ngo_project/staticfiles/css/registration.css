@@ -1,0 +1,176 @@
+/* ================= GENERAL PAGE STYLING ================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= CONTAINER FOR FORM & IMAGE ================= */
+.register-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 80px auto; /* Centers content */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ================= LEFT SIDE (FORM) ================= */
+.register-form {
+    width: 50%;
+    padding: 40px;
+    text-align: left;
+}
+
+.register-form h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register-form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.register-form input,
+.register-form select,
+.register-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+}
+
+.register-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.register-form input:focus,
+.register-form select:focus,
+.register-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* ================= PASSWORD RULES ================= */
+.password-rules {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.password-rules li {
+    margin: 5px 0;
+}
+/* ================= PASSWORD RESET ================= */
+
+.password-reset {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.password-reset a {
+    color: #d9534f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.password-reset a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= SUBMIT BUTTON ================= */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #218838;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #1e7e34;
+}
+
+/* ================= LOGIN LINK ================= */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #d9534f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ================= RIGHT SIDE (BLURRED IMAGE) ================= */
+.register-image {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: -300px; /* Moves the image up by 2 tab spaces */
+}
+
+.register-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+/* ================= FIX FOOTER OVERLAP ================= */
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 900px) {
+    .register-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .register-image {
+        display: none; /* Hides image on small screens */
+    }
+
+    .register-form {
+        width: 100%;
+    }
+}

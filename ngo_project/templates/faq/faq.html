@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+        <p><strong>What is NGO?</strong> NGO is a non-profit organization dedicated to helping people.</p>
+        <p><strong>How can I volunteer?</strong> You can sign up on our volunteer page.</p>
+    </div>
+
+    <h3 class="text-center">Chat with Admin</h3>
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" class="form-control" placeholder="Type a message...">
+            <button id="sendMessage" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/faq.js' %}"></script>
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
+{% endblock %}

@@ -1,0 +1,145 @@
+/* =======================
+   EVENT DETAILS PAGE STYLING
+   ======================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* =======================
+   CONTAINER STYLING
+   ======================= */
+.event-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* =======================
+   EVENT CARD STYLING
+   ======================= */
+.event-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.event-card:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* =======================
+   TEXT STYLING
+   ======================= */
+.event-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-details {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.event-details p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    background: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+/* =======================
+   REGISTRATION DETAILS
+   ======================= */
+.registration-details {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 15px;
+}
+
+.registration-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* =======================
+   EVENT ACTION BUTTON
+   ======================= */
+.event-action {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* =======================
+   LOGIN LINK STYLING
+   ======================= */
+.login-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+   ======================= */
+@media screen and (max-width: 900px) {
+    .event-card {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .event-details p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

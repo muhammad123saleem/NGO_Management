@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Donation Cancelled{% endblock %}
+
+{% block content %}
+<div class="cancel-container">
+    <h2>Payment Cancelled</h2>
+    <p>It looks like your donation was not completed.</p>
+    <a href="{% url 'donations:donation_form' %}">Try Again</a>
+</div>
+{% endblock %}

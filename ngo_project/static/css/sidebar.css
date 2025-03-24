@@ -1,0 +1,65 @@
+/* Example: static/css/sidebar.css */
+
+/* Container that holds sidebar + main content */
+#sidebar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* The sidebar itself */
+#sidebar {
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  min-height: 80vh; /* ensure it’s tall enough */
+  padding: 20px;
+}
+
+/* Title in the sidebar */
+.sidebar-title {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* Sidebar UL/LI styling */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-app {
+  margin-bottom: 1rem;
+}
+.sidebar-app-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Child models under each app */
+.sidebar-model {
+  margin-left: 15px; /* indent child items */
+}
+
+/* Main content area */
+#main-content {
+  flex: 1;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.dashboard-title {
+  margin-top: 0;
+}
+
+.recent-actions {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+.nav-sidebar {
+  display: none !important;
+}

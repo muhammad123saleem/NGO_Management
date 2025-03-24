@@ -1,0 +1,135 @@
+/* ==========================
+   General Page Styling
+   ========================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================
+   Donation Form Section
+   ========================== */
+.donation-form-container {
+    max-width: 500px;
+    background: white;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Headings */
+.donation-form-container h2 {
+    color: #f57c00;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.donation-form-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   Form Styling
+   ========================== */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Form Inputs */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+}
+
+/* Form Input Focus */
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* ==========================
+   Submit Button
+   ========================== */
+.btn-success {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background: #1e7e34;
+}
+
+/* ==========================
+   Secure Payment Section
+   ========================== */
+.secure-payment {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.secure-payment img {
+    width: 120px;
+    margin: 10px;
+}
+
+/* Success Message */
+.success-message {
+    color: green;
+    font-weight: bold;
+    display: none;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   Responsive Design
+   ========================== */
+@media screen and (max-width: 768px) {
+    .donation-form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-success {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

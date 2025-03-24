@@ -1,0 +1,48 @@
+/* static/css/custom_admin.css */
+
+/* Overall body styling */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header customization */
+#header {
+  background-color: #004080;
+  color: white;
+}
+#header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Global navigation bar style */
+#nav-global {
+  background-color: #0066cc;
+}
+
+/* Styling for change list and forms */
+.change-form, .change-list {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Customize links in the admin */
+a {
+  color: #0066cc;
+}
+a:hover {
+  color: #004080;
+}
+
+/* Footer customization */
+#footer {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Additional custom styles can be added here */

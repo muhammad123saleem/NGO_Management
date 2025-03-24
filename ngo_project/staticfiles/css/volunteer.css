@@ -1,0 +1,280 @@
+/* =======================
+   GENERAL PAGE STYLING
+   ======================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* =======================
+   STYLIZED TEXT SECTION
+   ======================= */
+.volunteer-text-section {
+    background: #ffffff !important;
+    padding: 40px !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1) !important;
+    margin: 40px auto !important;
+    max-width: 900px !important;
+    text-align: center !important;
+    transition: 0.3s ease-in-out !important;
+}
+
+/* Box Hover Effect */
+.volunteer-text-section:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Heading Styling */
+.volunteer-text-section h2 {
+    font-size: 2.4rem !important;
+    font-weight: bold !important;
+    color: #222 !important;
+    margin-bottom: 20px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Subheading */
+.volunteer-text-section p {
+    font-size: 1.2rem !important;
+    color: #555 !important;
+    margin-bottom: 25px !important;
+}
+
+/* =======================
+   BOXED TASK LIST
+   ======================= */
+.task-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+}
+
+/* Individual Task Box */
+.task-box {
+    background: #f8f9fa !important;
+    padding: 15px !important;
+    width: 85% !important;
+    max-width: 700px !important;
+    border-left: 5px solid #ff9800 !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08) !important;
+    transition: 0.3s !important;
+}
+
+/* Hover Effect */
+.task-box:hover {
+    background: #fff3e0 !important;
+    transform: scale(1.02) !important;
+    cursor: pointer !important;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Task Links */
+.task-box a {
+    text-decoration: none !important;
+    font-weight: bold !important;
+    color: #ff5722 !important;
+    transition: 0.3s !important;
+}
+
+.task-box a:hover {
+    color: #e64a19 !important;
+    text-decoration: underline !important;
+}
+
+/* =======================
+   UPCOMING EVENTS SECTION
+   ======================= */
+.upcoming-events {
+    margin-top: 30px !important;
+    padding: 25px !important;
+    width: 90% !important;
+    max-width: 750px !important;
+    background: #f3f3f3 !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1) !important;
+    text-align: center !important;
+}
+
+/* Upcoming Events Heading */
+.upcoming-events h3 {
+    font-size: 1.8rem !important;
+    color: #444 !important;
+    margin-bottom: 15px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    border-bottom: 3px solid #007bff !important;
+    display: inline-block !important;
+    padding-bottom: 5px !important;
+}
+
+/* Upcoming Events List */
+.upcoming-events ul {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+/* Individual Event Box */
+.event-box {
+    font-size: 1.1rem !important;
+    color: #333 !important;
+    padding: 15px !important;
+    width: 90% !important;
+    max-width: 600px !important;
+    margin: 10px auto !important;
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: 0.3s !important;
+}
+
+/* Hover Effect */
+.event-box:hover {
+    transform: scale(1.02) !important;
+    background: #f8f8f8 !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Event Links */
+.event-box a {
+    font-weight: bold !important;
+    color: #28a745 !important;
+    text-decoration: none !important;
+    transition: 0.3s !important;
+}
+
+.event-box a:hover {
+    color: #218838 !important;
+    text-decoration: underline !important;
+}
+
+/* ===========================
+   VOLUNTEER SECTION STYLING
+   =========================== */
+.volunteer-section {
+    position: relative;
+    background: url('../images/volunteer/volunteer.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Blurred Background Overlay */
+.background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+/* ===========================
+   VOLUNTEER FORM STYLING
+   =========================== */
+.volunteer-form-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+}
+
+/* Form Headings */
+.volunteer-form-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f57c00;
+    margin-bottom: 10px;
+}
+
+.volunteer-form-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.volunteer-form-container p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   FORM INPUTS
+   =========================== */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* ===========================
+   SUBMIT BUTTON
+   =========================== */
+.btn-custom {
+    background: #218838;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-custom:hover {
+    background: #1e7e34;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+   ======================= */
+@media screen and (max-width: 900px) {
+    .volunteer-text-section {
+        width: 95% !important;
+        padding: 20px !important;
+    }
+
+     .volunteer-form-container {
+        width: 90%;
+    }
+
+    .task-box,
+    .event-box {
+        width: 95% !important;
+    }
+}

@@ -1,0 +1,29 @@
+/* Container that holds all event cards */
+.card-container {
+  padding: 1rem; /* Outer padding around the container */
+}
+
+/* Individual event card styling */
+.card {
+  border: 2px solid #333;  /* Thicker border */
+  border-radius: 6px;      /* Slight rounding */
+  padding: 1rem;           /* Inner spacing for content */
+  margin-bottom: 1.5rem;   /* Spacing below each card */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Heading style for each event card */
+.card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Link styling within each card (e.g., "View Details") */
+.card a {
+  color: #007bff; /* Typical link color */
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

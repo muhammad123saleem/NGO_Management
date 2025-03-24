@@ -1,0 +1,77 @@
+{% extends "admin/base.html" %}
+{% load i18n admin_urls static %}
+
+{% block title %}NGO Admin Dashboard{% endblock title %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <!-- Include your custom admin CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom_admin.css' %}">
+{% endblock extrastyle %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <!-- Include your custom admin JavaScript -->
+  <script src="{% static 'js/custom_admin.js' %}"></script>
+{% endblock extrahead %}
+
+{% block branding %}
+  <!-- Customize the header branding -->
+  <h1 id="site-name"><a href="{% url 'admin:index' %}">NGO Admin Dashboard</a></h1>
+{% endblock branding %}
+
+{% block nav-global %}
+  {{ block.super }}
+{% endblock nav-global %}
+
+{% block content %}
+<div id="sidebar-container" style="display: flex;">
+  <!-- Sidebar Menu -->
+  <div id="sidebar" style="width: 250px; padding: 20px; background: #f8f9fa; border-right: 1px solid #ddd;">
+    <h2 class="sidebar-title" style="font-size: 1.2rem; margin-bottom: 15px;">Menu</h2>
+    <ul class="sidebar-list" style="list-style: none; padding: 0;">
+      {% for app in app_list %}
+        <li class="sidebar-app" style="margin-bottom: 10px;">
+          <strong class="sidebar-app-title" style="display: block; margin-bottom: 5px;">{{ app.name }}</strong>
+          <ul style="list-style: none; padding-left: 15px;">
+            {% for model in app.models %}
+              <li class="sidebar-model" style="margin-bottom: 5px;">
+                <a href="{{ model.admin_url }}" style="text-decoration: none; color: #007bff;">
+                  {{ model.name }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Main Content Area -->
+  <div id="main-content" style="flex: 1; padding: 20px;">
+    <h1 class="dashboard-title" style="font-size: 2rem; margin-bottom: 10px;">
+      {% blocktrans %}NGO Admin Dashboard{% endblocktrans %}
+    </h1>
+    <p style="margin-bottom: 20px;">Welcome to the custom NGO admin panel. Select a section on the left to manage records.</p>
+    <hr style="margin-bottom: 20px;">
+
+    {% if site_url %}
+      <p class="small">
+        <a href="{{ site_url }}">{{ _('View site') }}</a>
+      </p>
+    {% endif %}
+
+    {% if has_permission %}
+      {% block app_list %}
+        {# Optionally, include default boxes for apps here if desired #}
+      {% endblock %}
+      <div class="recent-actions" style="margin-top: 20px;">
+        {% if user.is_staff %}
+          <!-- Replace the missing recent actions include with a placeholder message -->
+          <p>No recent actions available.</p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

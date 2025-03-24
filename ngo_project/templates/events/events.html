@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Events - NGO{% endblock title %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12"><h2>Events</h2></div>
+      <div class="col-12">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'events:events' %}">Events</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="events-content">
+  <h2 class="text-center fs-1 colour-purple">Events</h2>
+  <h3 class="fs-3 text-center colour-blue mb-3">Major areas of Focus</h3>
+  <div class="card-container">
+    {% for event in events %}
+      <div class="card">
+        <h2>{{ event.name }}</h2>
+        <p>Date: {{ event.date|date:"F j, Y" }}</p>
+        <p>Time: {{ event.time }}</p>
+        <p>Location: {{ event.location }}</p>
+        <p><a href="{% url 'events:event_detail' event.id %}">View Details</a></p>
+      </div>
+    {% empty %}
+      <p>No events available at this time.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

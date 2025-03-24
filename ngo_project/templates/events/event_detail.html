@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Event Details - {{ event.name }}{% endblock title %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/event_detail.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="event-container">
+  <div class="event-card">
+    <h2 class="event-title">{{ event.name }}</h2>
+    <div class="event-details">
+      <p><strong>Date:</strong> {{ event.date|date:"F j, Y" }}</p>
+      <p><strong>Time:</strong> {{ event.time }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+      <p class="event-description"><strong>Description:</strong> {{ event.description }}</p>
+    </div>
+
+    {% if registration %}
+      <div class="registration-details">
+        <h3>Your Registration Details:</h3>
+        <p><strong>Ticket Number:</strong> {{ registration.ticket_number }}</p>
+        <p><strong>Date Registered:</strong> {{ registration.date_registered|date:"F j, Y, g:i a" }}</p>
+        <p><strong>Name:</strong> {{ registration.name }}</p>
+        <p><strong>Phone:</strong> {{ registration.phone_number }}</p>
+        <p><strong>Address:</strong> {{ registration.address }}</p>
+        <p><strong>Number of Attendees:</strong> {{ registration.member_count }}</p>
+      </div>
+    {% else %}
+      <div class="event-action">
+        {% if user.is_authenticated %}
+          <a href="{% url 'events:event_register' event.id %}" class="btn btn-primary">
+            Register for this Event
+          </a>
+        {% else %}
+          <p>
+            Please <a href="{% url 'login' %}?next={% url 'events:event_detail' event.id %}" class="login-link">
+              login</a> to register for this event.
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}
